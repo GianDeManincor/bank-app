@@ -1,6 +1,7 @@
 package com.github.giandemanincor.bankapp.controller;
 
 import com.github.giandemanincor.bankapp.exception.ContaExistException;
+import com.github.giandemanincor.bankapp.exception.DefaultException;
 import com.github.giandemanincor.bankapp.model.Conta;
 import com.github.giandemanincor.bankapp.model.Pessoa;
 import com.github.giandemanincor.bankapp.service.ContaService;
@@ -21,7 +22,7 @@ public class ContaController {
     }
 
     @PostMapping("/criar")
-    public ResponseEntity<Conta> criarConta(@RequestBody Pessoa pessoa) throws ContaExistException {
+    public ResponseEntity<Conta> criarConta(@RequestBody Pessoa pessoa) throws DefaultException {
         return ResponseEntity.ok(contaService.criarConta(pessoa));
     }
 }

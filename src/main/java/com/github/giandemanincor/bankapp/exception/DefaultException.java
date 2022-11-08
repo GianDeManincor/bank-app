@@ -1,14 +1,13 @@
 package com.github.giandemanincor.bankapp.exception;
 
-public class ContaExistException extends DefaultException {
+public class DefaultException extends Exception {
 
     private int codigo;
     private String mensagem;
 
-    public ContaExistException(int codigo, String mensagem) {
-        super(codigo, mensagem);
-        this.codigo = codigo;
-        this.mensagem = mensagem;
+    public DefaultException(int codigo, String mensagem) {
+        this.codigo = this.codigo;
+        this.mensagem = this.mensagem;
     }
 
     public int getCodigo() {

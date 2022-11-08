@@ -1,11 +1,11 @@
 package com.github.giandemanincor.bankapp.exception;
 
-public class ContaExistException extends DefaultException {
+public class ContaNotFoundException extends DefaultException {
 
     private int codigo;
     private String mensagem;
 
-    public ContaExistException(int codigo, String mensagem) {
+    public ContaNotFoundException(int codigo, String mensagem) {
         super(codigo, mensagem);
         this.codigo = codigo;
         this.mensagem = mensagem;
@@ -26,4 +26,5 @@ public class ContaExistException extends DefaultException {
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
     }
+
 }

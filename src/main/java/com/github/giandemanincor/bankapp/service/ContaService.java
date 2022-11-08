@@ -15,7 +15,7 @@ import java.util.Random;
 @Service
 public class ContaService {
 
-    private static final Integer AGENCIA_DEFAULT = 3977;
+    private static final java.lang.Integer AGENCIA_DEFAULT = 3977;
 
     private ContaRepository contaRepository;
 
@@ -35,13 +35,13 @@ public class ContaService {
     }
 
     private Conta gerarConta(Pessoa pessoa) {
-        Conta conta = new Conta();
-        conta.setAgencia(AGENCIA_DEFAULT);
-        conta.setConta(new Random().nextInt(1000) + 9999);
-        conta.setSaldo(BigDecimal.valueOf(0));
-        conta.setPessoa(cadastrarPessoa(pessoa));
-        contaRepository.save(conta);
-        return conta;
+        Conta integer = new Conta();
+        integer.setAgencia(AGENCIA_DEFAULT);
+        integer.setConta(new Random().nextInt(1000) + 9999);
+        integer.setSaldo(BigDecimal.valueOf(0));
+        integer.setPessoa(cadastrarPessoa(pessoa));
+        contaRepository.save(integer);
+        return integer;
     }
 
     private Pessoa cadastrarPessoa(Pessoa pessoa) {
